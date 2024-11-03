@@ -19,7 +19,7 @@ class CustomUser(AbstractUser):
 class Task(models.Model):
     user = models.ForeignKey(
         CustomUser,
-        on_delete=models.Cascade,
+        on_delete=models.CASCADE,
         verbose_name='Пользователь'
         )
     title = models.CharField(
@@ -42,6 +42,7 @@ class Task(models.Model):
     class Meta:
         verbose_name = 'Задача'
         verbose_name_plural = 'Задачи'
+        ordering = ['complete_status', '-create']
 
     def __str__(self):
         return self.title
