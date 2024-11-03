@@ -1,0 +1,9 @@
+
+<table>
+    {% for tasks in tasks_list %}
+        <tr>
+            <td>{{ tasks.title }}</td>
+            <td><a href="{% url 'task' tasks.id %}"> View </a></td>
+        </tr>
+    {% endfor %}
+</table>

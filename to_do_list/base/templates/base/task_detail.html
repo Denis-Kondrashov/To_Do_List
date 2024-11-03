@@ -1,0 +1,7 @@
+<table>
+    <tr><th>User</th><td>{{ task_detail.user.username }}</td></tr>
+    <tr><th>Title</th><td>{{ task_detail.title }}</td></tr>
+    <tr><th>Description</th><td>{{ task_detail.description }}</td></tr>
+    <tr><th>Status</th><td>{{ task_detail.complete_status|yesno:"Completed,Not Completed" }}</td></tr>
+    <tr><th>Creation Date</th><td>{{ task_detail.create|date:"Y-m-d H:i" }}</td></tr>
+</table>
