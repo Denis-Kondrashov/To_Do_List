@@ -4,6 +4,9 @@
     {% for tasks in tasks_list %}
         <tr>
             <td>{{ tasks.title }}</td>
+            <td>{{ tasks.user }}</td>
+            <td>{{ tasks.description }}</td>
+            <td>{{ tasks.create }}</td>
             <td><a href="{% url 'task_detail' tasks.id %}"> View </a></td>
             <td><a href="{% url 'task_update' tasks.id %}"> Update </a></td>
             <td><a href="{% url 'task_delete' tasks.id %}"> Delete </a></td>
