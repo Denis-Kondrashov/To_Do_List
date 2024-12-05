@@ -45,6 +45,9 @@ AUTH_USER_MODEL = 'base.CustomUser'
 
 ROOT_URLCONF = 'to_do_list.urls'
 
+EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
+
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -116,6 +119,10 @@ STATICFILES_DIR = [
 ]
 
 STATIC_ROOT = BASE_DIR / 'staticfiles'
+
+
+EMAIL_FILE_PATH = BASE_DIR / 'sent_emails'
+
 
 
 # Default primary key field type
