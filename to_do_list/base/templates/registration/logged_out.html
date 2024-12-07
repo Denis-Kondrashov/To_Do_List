@@ -1,14 +1,12 @@
-{% extends "admin/base_site.html" %}
-{% load i18n %}
+{% extends 'base.html' %}
 
-{% block breadcrumbs %}<div class="breadcrumbs"><a href="{% url 'admin:index' %}">{% translate 'Home' %}</a></div>{% endblock %}
-
-{% block nav-sidebar %}{% endblock %}
+{% block title %}Выход выполнен{% endblock %}
 
 {% block content %}
-
-<p>{% translate "Thanks for spending some quality time with the web site today." %}</p>
-
-<p><a href="{% url 'admin:index' %}">{% translate 'Log in again' %}</a></p>
-
+<div class="container my-5">
+    <h1 class="text-center">Вы вышли из аккаунта</h1>
+    <div class="text-center mt-4">
+        <a href="{% url 'login' %}" class="btn btn-primary">Войти снова</a>
+    </div>
+</div>
 {% endblock %}
