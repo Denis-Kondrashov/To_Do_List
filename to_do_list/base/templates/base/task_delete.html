@@ -11,7 +11,7 @@
     {% csrf_token %}
     <div class="text-end">
         <button type="submit" class="btn btn-danger">Удалить</button>
-        <a href="{% url 'tasks' %}" class="btn btn-secondary">Отмена</a>
+        <a href="{% url 'base:tasks' %}" class="btn btn-secondary">Отмена</a>
     </div>
 </form>
 {% endblock %}
