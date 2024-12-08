@@ -8,7 +8,7 @@ from . models import Task, CustomUser
 class TaskForm(forms.ModelForm):
     class Meta:
         model = Task
-        fields = ['user', 'title', 'description', 'complete_status']
+        fields = ['title', 'description', 'complete_status']
 
 
 class MyUserCreationForm(UserCreationForm):

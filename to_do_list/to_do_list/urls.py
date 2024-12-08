@@ -16,3 +16,5 @@ urlpatterns = [
          ), name='registration',
          ),
 ]
+
+handler403 = 'base.views.custom_403_view'

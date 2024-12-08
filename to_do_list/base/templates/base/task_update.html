@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}Редактировать задачу{% endblock %}
+
+{% block content %}
+<h1 class="text-center my-4">Редактировать задачу</h1>
+<div class="text-end mb-3">
+    <a href="{% url 'base:tasks' %}" class="btn btn-secondary">Назад</a>
+</div>
+<form method="post" class="card p-4">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <div class="text-end">
+        <button type="submit" class="btn btn-success">Сохранить</button>
+    </div>
+</form>
+{% endblock %}
